@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .add(R.id.container_content,mMeFragment).hide(mMeFragment)
                 .commit();
 
-
-
     }
 
     private void initView() {
