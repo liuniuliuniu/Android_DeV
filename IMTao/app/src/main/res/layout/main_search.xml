@@ -49,6 +49,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="目的地/景点/酒店/门票"
+            android:focusedByDefault="false"
+            android:focusable="false"
             android:background="@null"
             android:textSize="18sp"/>
 
