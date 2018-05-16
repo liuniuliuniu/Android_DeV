@@ -1,7 +1,7 @@
 package com.example.liushaohua02.cardview.entity;
 
 
-// 模型 一定要设置set get方法  以及初始化方法
+// 模型 一定要设置set get方法  以及初始化方法  模型
 public class City {
 
     int iconID;
