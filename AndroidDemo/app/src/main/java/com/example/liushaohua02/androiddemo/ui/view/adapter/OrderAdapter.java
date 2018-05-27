@@ -28,6 +28,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderItemVie
     }
 
 
+
     @Override
     public OrderItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = mInflater.inflate(R.layout.item_order, parent, false);
@@ -50,10 +51,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderItemVie
                 .into(holder.mIvImage);
 
         holder.mTvName.setText(order.getRestaurant().getName());
-        if (order.ps.size() > 0)
-            holder.mTvLabel.setText(order.ps.get(0).product.getName() + "等" + order.getCount() + "件商品");
-        holder.mTvPrice.setText("共消费：" + order.getPrice() + "元");
+        if (order.ps.size() > 0) {
 
+            holder.mTvLabel.setText(order.ps.get(0).product.getName() + "等" + order.getCount() + "件商品");
+            holder.mTvPrice.setText("共消费：" + order.getPrice() + "元");
+        }else {
+            holder.mTvLabel.setText("无消费");
+        };
 
     }
 
@@ -63,6 +67,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderItemVie
         public TextView mTvName;
         public TextView mTvLabel;
         public TextView mTvPrice;
+
+
 
         public OrderItemViewHolder(View itemView) {
             super(itemView);
