@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!--android:name=".ResApplication" 指定初始化文件-->
+    <!-- android:name=".ResApplication" 指定初始化文件 -->
     <application
         android:name=".ResApplication"
         android:allowBackup="true"
@@ -24,7 +24,8 @@
         </activity>
         <activity android:name=".ui.view.activity.RegisterActivity" />
         <activity android:name=".ui.view.activity.LoginActivity" />
-        <activity android:name=".ui.view.activity.OrderActivity"></activity>
+        <activity android:name=".ui.view.activity.OrderActivity" />
+        <activity android:name=".ui.view.activity.ProductListActivity"></activity>
     </application>
 
 </manifest>

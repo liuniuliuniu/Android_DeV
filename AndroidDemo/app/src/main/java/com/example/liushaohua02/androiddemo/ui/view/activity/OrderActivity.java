@@ -1,5 +1,6 @@
 package com.example.liushaohua02.androiddemo.ui.view.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -72,9 +73,15 @@ public class OrderActivity extends BaseActivity {
                 loadMore();
             }
         });
+
         mBtnTakeOrder.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+                Intent intent = new Intent(OrderActivity.this,ProductListActivity.class);
+
+                startActivityForResult(intent,1001);
 
             }
         });
