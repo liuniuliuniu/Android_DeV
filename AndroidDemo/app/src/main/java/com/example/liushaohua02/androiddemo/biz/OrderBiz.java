@@ -49,4 +49,7 @@ public class OrderBiz {
                 .execute(callback);
     }
 
+    public void onDestory() {
+        OkHttpUtils.getInstance().cancelTag(this);
+    }
 }

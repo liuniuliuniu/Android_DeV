@@ -187,4 +187,9 @@ public class OrderActivity extends BaseActivity {
     }
 
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mOrderBiz.onDestory();
+    }
 }

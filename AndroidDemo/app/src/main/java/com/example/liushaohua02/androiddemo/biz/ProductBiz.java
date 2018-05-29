@@ -20,4 +20,8 @@ public class ProductBiz {
                 .execute(callback);
     }
 
+
+    public void onDestory() {
+        OkHttpUtils.getInstance().cancelTag(this);
+    }
 }
