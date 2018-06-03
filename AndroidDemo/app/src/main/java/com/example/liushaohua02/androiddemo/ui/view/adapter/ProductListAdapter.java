@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.liushaohua02.androiddemo.R;
 import com.example.liushaohua02.androiddemo.bean.Product;
 import com.example.liushaohua02.androiddemo.config.Config;
+import com.example.liushaohua02.androiddemo.ui.view.activity.ProductDetailActivity;
 import com.example.liushaohua02.androiddemo.ui.view.vo.ProductItem;
 import com.squareup.picasso.Picasso;
 
@@ -112,6 +113,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
                 @Override
                 public void onClick(View v) {
 
+                    ProductDetailActivity.launch(mContext,mProductItems.get(getAdapterPosition()));
+
                 }
             });
 
@@ -124,8 +127,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
                     ProductItem productItem = mProductItems.get(pos);
                     productItem.count += 1;
                     mTvCount.setText(productItem.count + "");
-                    // 回调activity计算总价格
 
+                    // 回调activity计算总价格
                     if (mOnProductListener != null){
                         mOnProductListener.OnProductAdd(productItem);
                     }
@@ -146,8 +149,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
                         productItem.count = 0;
                     }
                     mTvCount.setText(productItem.count + "");
-                    // 回调activity
 
+                    // 回调activity
                     if (mOnProductListener != null){
                         mOnProductListener.OnProductSub(productItem);
                     }

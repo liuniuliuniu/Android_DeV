@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class OrderBiz {
 
+    // 请求数据
     public void listByPage(int currentPage, CommonCallBack<List<Order>> callback) {
         OkHttpUtils
                 .post()
@@ -22,6 +23,8 @@ public class OrderBiz {
     }
 
 
+
+    // 添加数据
     public void add(Order order, CommonCallBack callback) {
 
         Map<Product, Integer> productsMap = order.productsMap;
@@ -35,6 +38,7 @@ public class OrderBiz {
             sb.append("|");
 
         }
+
         sb = sb.deleteCharAt(sb.length() - 1);
 
         OkHttpUtils

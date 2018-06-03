@@ -99,9 +99,17 @@ public class LoginActivity extends BaseActivity{
 
     private void toOrderActivity() {
 
-        Intent intent = new Intent(this,OrderActivity.class);
-        startActivity(intent);
-        // 不需要返回此控制器 就用finis将当前控制器释放
+//        Intent intent = new Intent(this,OrderActivity.class);
+//        startActivity(intent);
+        // 不需要返回此控制器 就用finish将当前控制器释放
+
+        // 隐式启动intent
+        Intent intent = new Intent("android.intent.action.ALL_APPS");
+
+        intent.addCategory("com.example.intent_test.MY_CATEGORY");
+
+        startActivity (intent);
+
         finish();
     }
 

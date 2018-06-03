@@ -24,8 +24,16 @@
         </activity>
         <activity android:name=".ui.view.activity.RegisterActivity" />
         <activity android:name=".ui.view.activity.LoginActivity" />
-        <activity android:name=".ui.view.activity.OrderActivity" />
-        <activity android:name=".ui.view.activity.ProductListActivity"></activity>
+        <activity android:name=".ui.view.activity.OrderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ALL_APPS" />
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="com.example.intent_test.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.view.activity.ProductListActivity" />
+        <activity android:name=".ui.view.activity.ProductDetailActivity"></activity>
     </application>
 
 </manifest>

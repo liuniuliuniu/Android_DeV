@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.liushaohua02.androiddemo.R;
+import com.example.liushaohua02.androiddemo.bean.Order;
 import com.example.liushaohua02.androiddemo.bean.Product;
+import com.example.liushaohua02.androiddemo.biz.OrderBiz;
 import com.example.liushaohua02.androiddemo.biz.ProductBiz;
 import com.example.liushaohua02.androiddemo.net.CommonCallBack;
 import com.example.liushaohua02.androiddemo.ui.view.adapter.ProductListAdapter;
@@ -33,10 +35,14 @@ public class ProductListActivity extends BaseActivity {
     private TextView mTvCount;
     private Button mBtnPay;
 
+    private OrderBiz mOrderBiz = new OrderBiz();
+    private Order mOrder = new Order();
+
     private List<ProductItem>mDatas = new ArrayList<>();
 
     // 业务请求类
     ProductBiz mProductBiz = new ProductBiz();
+
 
     private int mCurrentPage = 0;
     private float mTotalPrice;
@@ -76,30 +82,58 @@ public class ProductListActivity extends BaseActivity {
             public void OnProductAdd(ProductItem productItem) {
 
                 mTotalCount++;
-                mTvCount.setText("数量为:" + productItem.count);
+                mTvCount.setText("数量为:" + mTotalCount);
                 mTotalPrice += productItem.getPrice();
                 mBtnPay.setText(mTotalPrice + "元 立即支付");
+
+                mOrder.addProduct(productItem);
 
             }
 
             @Override
             public void OnProductSub(ProductItem productItem) {
 
-
                 if (mTotalCount == 0) return;
                 mTotalCount--;
-                mTvCount.setText("数量为:" + productItem.count);
+                mTvCount.setText("数量为:" + mTotalCount);
                 mTotalPrice -= productItem.getPrice();
-
                 mBtnPay.setText(mTotalPrice + "元 立即支付");
+
+                mOrder.removeProduct(productItem);
             }
         });
-
-
 
         mBtnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (mTotalCount <= 0){
+                    T.showToast("您还没有选择菜品");
+                    return;
+                }
+
+                mOrder.setCount(mTotalCount);
+                mOrder.setPrice(mTotalPrice);
+                mOrder.setRestaurant(mDatas.get(0).getRestaurant());
+
+                startProgressLoadig();
+
+                mOrderBiz.add(mOrder, new CommonCallBack() {
+                    @Override
+                    public void onError(Exception e) {
+                        stopProgressLoading();
+                        T.showToast(e.getMessage());
+                    }
+
+                    @Override
+                    public void onSuccess(Object response) {
+                        stopProgressLoading();
+                        T.showToast("订单支付成功");
+                        setResult(RESULT_OK);
+
+                        finish();
+                    }
+                });
 
             }
         });
@@ -122,6 +156,7 @@ public class ProductListActivity extends BaseActivity {
         mRecyclerView.setAdapter(mProductListAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        loadData();
     }
 
     private void loadMore() {

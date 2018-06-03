@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.liushaohua02.androiddemo.R;
 import com.example.liushaohua02.androiddemo.bean.Order;
 import com.example.liushaohua02.androiddemo.config.Config;
+import com.example.liushaohua02.androiddemo.ui.view.activity.ProductDetailActivity;
 import com.squareup.picasso.Picasso;
 import java.util.List;
 

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -81,10 +82,24 @@ public class OrderActivity extends BaseActivity {
 
                 Intent intent = new Intent(OrderActivity.this,ProductListActivity.class);
 
+                // 调用这个方法启动activity的时候 可以重写下边的方法 来取到回调的值
                 startActivityForResult(intent,1001);
-
             }
         });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RESULT_OK && requestCode == 1001) {
+
+            loadDatas();
+        }
+
+
+
     }
 
     private void loadMore() {
@@ -143,6 +158,31 @@ public class OrderActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+
+
+    // 点击back 不直接退出app  还在后台运行可以重=重写此方法
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+
+            try {
+                // 一定要tryCatch 一下 找不到intent会报错的
+                Intent home  = new Intent(Intent.ACTION_MAIN);
+                home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                home.addCategory(Intent.CATEGORY_HOME);
+                startActivity(home);
+                return true;
+            }catch (Exception e) {
+
+            }
+        }
+
+        return super.onKeyDown(keyCode, event);
+
     }
 
     private void setupUI() {
