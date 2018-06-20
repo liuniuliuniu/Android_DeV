@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.liushaohua02.androiddemolist.CardView.CardViewActivity;
+import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
 import com.example.liushaohua02.androiddemolist.JS.JSActivity;
 import com.example.liushaohua02.androiddemolist.ListView.appListActivity;
 import com.example.liushaohua02.androiddemolist.ListView.ChatActivity;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("聊天listView的使用", ChatActivity.class));
         mlistItems.add(new listItem("activity传值", ActivityTransferMessage.class));
         mlistItems.add(new listItem("CardView", CardViewActivity.class));
+        mlistItems.add(new listItem("Dialog", DialogActivity.class));
         mListView.setAdapter(new mainActivityAdaptor(mlistItems));
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

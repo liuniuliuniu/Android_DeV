@@ -23,7 +23,8 @@
         <activity android:name=".Cache.CacheActivity" />
         <activity android:name=".TransferMessage.ActivityTransferMessage" />
         <activity android:name=".TransferMessage.ActivitySecondMessage" />
-        <activity android:name=".CardView.CardViewActivity"></activity>
+        <activity android:name=".CardView.CardViewActivity" />
+        <activity android:name=".Dialog.DialogActivity"></activity>
     </application>
 
 </manifest>
