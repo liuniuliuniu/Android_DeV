@@ -24,7 +24,9 @@
         <activity android:name=".TransferMessage.ActivityTransferMessage" />
         <activity android:name=".TransferMessage.ActivitySecondMessage" />
         <activity android:name=".CardView.CardViewActivity" />
-        <activity android:name=".Dialog.DialogActivity"></activity>
+        <activity android:name=".Dialog.DialogActivity" />
+        <activity android:name=".Fragment.FragmentDemoActivity" />
+        <activity android:name=".Fragment.StaticLoadFragmentActivity"></activity>
     </application>
 
 </manifest>

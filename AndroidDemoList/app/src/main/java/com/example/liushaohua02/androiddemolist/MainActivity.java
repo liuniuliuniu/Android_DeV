@@ -2,8 +2,8 @@ package com.example.liushaohua02.androiddemolist;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,13 +15,12 @@ import android.widget.TextView;
 
 import com.example.liushaohua02.androiddemolist.CardView.CardViewActivity;
 import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
+import com.example.liushaohua02.androiddemolist.Fragment.FragmentDemoActivity;
 import com.example.liushaohua02.androiddemolist.JS.JSActivity;
-import com.example.liushaohua02.androiddemolist.ListView.appListActivity;
 import com.example.liushaohua02.androiddemolist.ListView.ChatActivity;
+import com.example.liushaohua02.androiddemolist.ListView.appListActivity;
 import com.example.liushaohua02.androiddemolist.TransferMessage.ActivityTransferMessage;
 import com.example.liushaohua02.androiddemolist.model.listItem;
-
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("activity传值", ActivityTransferMessage.class));
         mlistItems.add(new listItem("CardView", CardViewActivity.class));
         mlistItems.add(new listItem("Dialog", DialogActivity.class));
+        mlistItems.add(new listItem("Fragment", FragmentDemoActivity.class));
         mListView.setAdapter(new mainActivityAdaptor(mlistItems));
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

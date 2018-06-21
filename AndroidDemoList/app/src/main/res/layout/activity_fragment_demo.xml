@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FragmentDemoActivity">
+
+
+    <Button
+        android:id="@+id/btn_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="static Activity View"
+        />
+
+    <LinearLayout
+        android:id="@+id/fragment_listlayout"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_fragment"
+        >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_containnerlayout"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/colorAccent"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toRightOf="@id/fragment_listlayout"
+        app:layout_constraintTop_toBottomOf="@id/btn_fragment"
+        >
+    </LinearLayout>
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
