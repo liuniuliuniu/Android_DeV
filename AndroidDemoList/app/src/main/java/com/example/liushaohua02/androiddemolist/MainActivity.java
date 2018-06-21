@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.example.liushaohua02.androiddemolist.CardView.CardViewActivity;
 import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
 import com.example.liushaohua02.androiddemolist.Fragment.FragmentDemoActivity;
+import com.example.liushaohua02.androiddemolist.GridView.GridActivity;
 import com.example.liushaohua02.androiddemolist.JS.JSActivity;
 import com.example.liushaohua02.androiddemolist.ListView.ChatActivity;
 import com.example.liushaohua02.androiddemolist.ListView.appListActivity;
@@ -45,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("CardView", CardViewActivity.class));
         mlistItems.add(new listItem("Dialog", DialogActivity.class));
         mlistItems.add(new listItem("Fragment", FragmentDemoActivity.class));
+        mlistItems.add(new listItem("GridVIew", GridActivity.class));
         mListView.setAdapter(new mainActivityAdaptor(mlistItems));
+
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

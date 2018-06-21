@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GridView.GridActivity">
+
+
+    <Button
+        android:id="@+id/gridbtn01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GridView 加载文字"/>
+
+
+    <Button
+        android:id="@+id/gridbtn02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GridView 获取手机的应用列表"/>
+
+    <Button
+        android:id="@+id/gridbtn03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GridView 获取网络图片"/>
+
+
+
+</LinearLayout>
