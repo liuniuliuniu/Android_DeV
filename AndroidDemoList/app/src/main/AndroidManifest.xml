@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".JS.JSActivity" />
         <activity android:name=".ListView.appListActivity" />
         <activity android:name=".ListView.ChatActivity" />
         <activity android:name=".Cache.CacheActivity" />
@@ -30,7 +31,10 @@
         <activity android:name=".GridView.GridActivity" />
         <activity android:name=".GridView.GridActivity01" />
         <activity android:name=".GridView.GridActiovity02" />
-        <activity android:name=".GridView.GirdActivity03"></activity>
+        <activity android:name=".GridView.GirdActivity03" />
+        <activity android:name=".UISetting.ActivityUI" />
+        <activity android:name=".UISetting.ActivityUIProgress"></activity>
+        <activity android:name=".UISetting.ActivityCheckBox"></activity>
     </application>
 
 </manifest>
