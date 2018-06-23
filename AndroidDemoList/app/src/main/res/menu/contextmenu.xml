@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="点击"
+        android:id="@+id/click"
+        />
+    <item
+        android:title="选择"
+        android:id="@+id/choose"
+        />
+
+
+</menu>

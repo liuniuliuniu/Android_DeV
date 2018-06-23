@@ -25,7 +25,6 @@ public class ActivityUI extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ui);
 
-
         mListView = findViewById(R.id.uilistview);
         mlistItems = new ArrayList<listItem>();
         mlistItems.add(new listItem("Progress", ActivityUIProgress.class));
@@ -34,6 +33,8 @@ public class ActivityUI extends BaseActivity {
         mlistItems.add(new listItem("ImageViewAndImageBtn", ActivityImageBtn.class));
         mlistItems.add(new listItem("RatingBar", ActivityRatingBar.class));
         mlistItems.add(new listItem("Btn四种监听方式", ActivityButton.class));
+        mlistItems.add(new listItem("Menu", ActivityMenu.class));
+        mlistItems.add(new listItem("UI控件的样式", ActivityUIStyle.class));
 
         mListView.setAdapter(new mainActivityAdaptor(ActivityUI.this,mlistItems));
 

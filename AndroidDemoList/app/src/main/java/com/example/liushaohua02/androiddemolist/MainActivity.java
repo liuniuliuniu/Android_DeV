@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.liushaohua02.androiddemolist.Android_Action.ActivityAction;
 import com.example.liushaohua02.androiddemolist.CardView.CardViewActivity;
 import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
 import com.example.liushaohua02.androiddemolist.Fragment.FragmentDemoActivity;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems = new ArrayList<listItem>();
         mlistItems.add(new listItem("UI各种样式的调整", ActivityUI.class));
         mlistItems.add(new listItem("Layout", ActivityLayoutDemo.class));
-
+        mlistItems.add(new listItem("Action", ActivityAction.class));
         mlistItems.add(new listItem("js交互", JSActivity.class));
         mlistItems.add(new listItem("listView使用",appListActivity.class));
         mlistItems.add(new listItem("聊天listView的使用", ChatActivity.class));

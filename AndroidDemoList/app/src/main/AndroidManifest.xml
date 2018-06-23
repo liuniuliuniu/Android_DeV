@@ -44,7 +44,11 @@
         <activity android:name=".Layout.ActivityGridLayout" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".Layout.ActivityConstraintLayout" />
-        <activity android:name=".Layout.ActivityFrameLayout"></activity>
+        <activity android:name=".Layout.ActivityFrameLayout" />
+        <activity android:name=".UISetting.ActivityMenu" />
+        <activity android:name=".Android_Action.ActivityAction" />
+        <activity android:name=".Android_Action.ActivityActionSecond" />
+        <activity android:name=".UISetting.ActivityUIStyle"></activity>
     </application>
 
 </manifest>

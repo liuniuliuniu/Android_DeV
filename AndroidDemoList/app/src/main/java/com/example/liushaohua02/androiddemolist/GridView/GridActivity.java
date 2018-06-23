@@ -19,6 +19,7 @@ public class GridActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GridActivity.this,GridActivity01.class);
+                intent.putExtra("Activity_TITLE","GridView加载文字");
                 startActivity(intent);
             }
         });
@@ -27,6 +28,7 @@ public class GridActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GridActivity.this,GridActiovity02.class);
+                intent.putExtra("Activity_TITLE","GridView获取手机应用列表");
                 startActivity(intent);
             }
         });
@@ -35,6 +37,7 @@ public class GridActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GridActivity.this,GirdActivity03.class);
+                intent.putExtra("Activity_TITLE","GridView获取网络图片");
                 startActivity(intent);
             }
         });
