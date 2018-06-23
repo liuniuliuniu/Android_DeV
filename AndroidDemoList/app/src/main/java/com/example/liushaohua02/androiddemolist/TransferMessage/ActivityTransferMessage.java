@@ -2,13 +2,13 @@ package com.example.liushaohua02.androiddemolist.TransferMessage;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
-public class ActivityTransferMessage extends AppCompatActivity {
+public class ActivityTransferMessage extends BaseActivity {
 
 
     public static final String BUTON_TITLE = "Buton_Title";
@@ -18,6 +18,8 @@ public class ActivityTransferMessage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfer_message);
+
+
 
          findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
              @Override

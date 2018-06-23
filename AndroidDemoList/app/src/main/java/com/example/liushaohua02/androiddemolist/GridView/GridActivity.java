@@ -2,12 +2,12 @@ package com.example.liushaohua02.androiddemolist.GridView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
-public class GridActivity extends AppCompatActivity {
+public class GridActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

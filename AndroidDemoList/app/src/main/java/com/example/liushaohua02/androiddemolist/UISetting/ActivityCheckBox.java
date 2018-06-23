@@ -2,7 +2,6 @@ package com.example.liushaohua02.androiddemolist.UISetting;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -10,12 +9,13 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityCheckBox extends AppCompatActivity {
+public class ActivityCheckBox extends BaseActivity {
 
 
     private CheckBox cbtravel,cbrun,cbread;

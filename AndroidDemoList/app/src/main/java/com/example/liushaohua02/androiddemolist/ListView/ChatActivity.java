@@ -1,6 +1,5 @@
 package com.example.liushaohua02.androiddemolist.ListView;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +11,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatActivity extends Activity {
+public class ChatActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

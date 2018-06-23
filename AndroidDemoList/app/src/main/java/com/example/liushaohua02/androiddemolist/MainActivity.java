@@ -13,6 +13,7 @@ import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
 import com.example.liushaohua02.androiddemolist.Fragment.FragmentDemoActivity;
 import com.example.liushaohua02.androiddemolist.GridView.GridActivity;
 import com.example.liushaohua02.androiddemolist.JS.JSActivity;
+import com.example.liushaohua02.androiddemolist.Layout.ActivityLayoutDemo;
 import com.example.liushaohua02.androiddemolist.ListView.ChatActivity;
 import com.example.liushaohua02.androiddemolist.ListView.appListActivity;
 import com.example.liushaohua02.androiddemolist.TransferMessage.ActivityTransferMessage;
@@ -24,6 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String Activity_TITLE = "Activity_Title";
     private static String TAG = "MainActivity";
     private ListView mListView;
     private List<listItem> mlistItems;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         mListView = findViewById(R.id.listview);
         mlistItems = new ArrayList<listItem>();
         mlistItems.add(new listItem("UI各种样式的调整", ActivityUI.class));
+        mlistItems.add(new listItem("Layout", ActivityLayoutDemo.class));
+
         mlistItems.add(new listItem("js交互", JSActivity.class));
         mlistItems.add(new listItem("listView使用",appListActivity.class));
         mlistItems.add(new listItem("聊天listView的使用", ChatActivity.class));
@@ -52,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                Class activity = mlistItems.get(position).getActivityName();
                 Log.e(TAG,activity.toString());
                 Intent intent = new Intent(MainActivity.this,activity);
+                intent.putExtra(Activity_TITLE,mlistItems.get(position));
+
                 startActivity(intent);
             }
         });

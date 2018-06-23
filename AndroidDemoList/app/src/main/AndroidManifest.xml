@@ -33,8 +33,18 @@
         <activity android:name=".GridView.GridActiovity02" />
         <activity android:name=".GridView.GirdActivity03" />
         <activity android:name=".UISetting.ActivityUI" />
-        <activity android:name=".UISetting.ActivityUIProgress"></activity>
-        <activity android:name=".UISetting.ActivityCheckBox"></activity>
+        <activity android:name=".UISetting.ActivityUIProgress" />
+        <activity android:name=".UISetting.ActivityCheckBox" />
+        <activity android:name=".UISetting.ActivityToggleBtnAndRadioBtn" />
+        <activity android:name=".UISetting.ActivityImageBtn" />
+        <activity android:name=".UISetting.ActivityRatingBar" />
+        <activity android:name=".UISetting.ActivityButton" />
+        <activity android:name=".Layout.ActivityLayoutDemo" />
+        <activity android:name=".Layout.ActivityTableLayout" />
+        <activity android:name=".Layout.ActivityGridLayout" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".Layout.ActivityConstraintLayout" />
+        <activity android:name=".Layout.ActivityFrameLayout"></activity>
     </application>
 
 </manifest>

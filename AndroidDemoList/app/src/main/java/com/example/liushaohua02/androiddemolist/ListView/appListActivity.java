@@ -1,6 +1,5 @@
 package com.example.liushaohua02.androiddemolist.ListView;
 
-import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -15,17 +14,19 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
 import java.util.List;
 
-public class appListActivity extends Activity {
+public class appListActivity extends BaseActivity {
 
 // 获取系统手机列表的app
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_list);
+
 
         // 获取 当前 listVIew
         ListView listView = findViewById(R.id.appList_List_View);

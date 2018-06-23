@@ -1,6 +1,8 @@
 package com.example.liushaohua02.androiddemolist.model;
 
-public class listItem {
+import java.io.Serializable;
+
+public class listItem implements Serializable {
 
     private String message;
     private Class activityName;
@@ -26,4 +28,8 @@ public class listItem {
     public void setActivityName(Class activityName) {
         this.activityName = activityName;
     }
+
+
+
+
 }

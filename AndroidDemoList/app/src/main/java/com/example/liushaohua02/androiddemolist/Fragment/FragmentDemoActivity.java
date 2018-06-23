@@ -2,12 +2,12 @@ package com.example.liushaohua02.androiddemolist.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
-public class FragmentDemoActivity extends AppCompatActivity implements ListFragment.OnTitleCLickListener {
+public class FragmentDemoActivity extends BaseActivity implements ListFragment.OnTitleCLickListener {
 
 
     private ListFragment listFragment;

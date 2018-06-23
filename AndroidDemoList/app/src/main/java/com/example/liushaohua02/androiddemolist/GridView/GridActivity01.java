@@ -1,16 +1,16 @@
 package com.example.liushaohua02.androiddemolist.GridView;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GridActivity01 extends AppCompatActivity {
+public class GridActivity01 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

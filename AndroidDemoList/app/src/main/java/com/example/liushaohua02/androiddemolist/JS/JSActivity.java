@@ -1,14 +1,14 @@
 package com.example.liushaohua02.androiddemolist.JS;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
-public class JSActivity extends Activity{
+public class JSActivity extends BaseActivity {
 
     private WebView mWebView;
     private TextView mTextView;
@@ -17,6 +17,7 @@ public class JSActivity extends Activity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_jsactivity);
+
 
         mWebView = findViewById(R.id.webView);
         mTextView = findViewById(R.id.textView);

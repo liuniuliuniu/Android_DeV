@@ -3,16 +3,16 @@ package com.example.liushaohua02.androiddemolist.Cache;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.liushaohua02.androiddemolist.BaseActivity;
 import com.example.liushaohua02.androiddemolist.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CacheActivity extends AppCompatActivity {
+public class CacheActivity extends BaseActivity {
 
 
     SharedPreferences preference ;
