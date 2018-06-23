@@ -88,14 +88,14 @@
             android:text="使用layer-list 背景色" />
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
+            android:id="@+id/textview_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="textview"
+            android:textSize="20dp"
+            style="@style/MenuStyle"
             android:layout_marginTop="8dp" />
-
-
-
     </LinearLayout>
-
 
 
 
