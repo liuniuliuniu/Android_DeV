@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.liushaohua02.imtao.LoginActivity;
 import com.example.liushaohua02.imtao.R;
 
 public class MeFragment extends Fragment {

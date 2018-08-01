@@ -37,9 +37,6 @@ public abstract class CommonCallBack<T> extends StringCallback {
 
     }
 
-
-
-
     @Override
     public void onError(Call call, Exception e) {
 
