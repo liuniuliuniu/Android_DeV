@@ -1,7 +1,7 @@
 package com.example.liushaohua02.androiddemolist.Android_Action;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -25,10 +25,25 @@ public class ActivityAction extends BaseActivity implements Observer{
         findViewById(R.id.btnid).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityAction.this,ActivityActionSecond.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ActivityAction.this,ActivityActionSecond.class);
+//                startActivity(intent);
+
+                CommonCallBack.Operation(new CommonCallBack() {
+                    @Override
+                    public void onFinish(Boolean finish) {
+                        Log.e("-----","" + finish);
+                    }
+
+                    @Override
+                    public void onSuccess(Boolean success) {
+                        Log.e("-----","" + success);
+                    }
+                });
+
             }
         });
+
+
         // 注册观察者 通知的使用方式
         MyObserverable.getObserverable().addObserver(this);
 
@@ -55,6 +70,7 @@ public class ActivityAction extends BaseActivity implements Observer{
         tv.setText(data.toString());
     }
 
+
     // 自定义listener
     public interface Listener {
         public void update(String string);
@@ -67,10 +83,12 @@ public class ActivityAction extends BaseActivity implements Observer{
         public void setListener(Listener listener) {
             mListener = listener;
         }
+
         public void doSomething(String string) {
             if (mListener != null) {
                 mListener.update(string);
             }
         }
     }
+
 }

@@ -21,6 +21,5 @@ public class ActivityActionSecond extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

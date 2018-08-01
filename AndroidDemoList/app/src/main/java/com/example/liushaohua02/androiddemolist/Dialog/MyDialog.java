@@ -14,7 +14,6 @@ public class MyDialog extends Dialog {
 
         setContentView(R.layout.mydialog);
 
-
     }
 //
 }

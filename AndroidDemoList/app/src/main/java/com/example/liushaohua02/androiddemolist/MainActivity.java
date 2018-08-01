@@ -9,20 +9,26 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.liushaohua02.androiddemolist.Android_Action.ActivityAction;
+import com.example.liushaohua02.androiddemolist.Cache.CacheActivity;
 import com.example.liushaohua02.androiddemolist.CardView.CardViewActivity;
 import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
 import com.example.liushaohua02.androiddemolist.Fragment.FragmentDemoActivity;
 import com.example.liushaohua02.androiddemolist.GridView.GridActivity;
+import com.example.liushaohua02.androiddemolist.Interface的使用.InterfaceActivity;
 import com.example.liushaohua02.androiddemolist.JS.JSActivity;
 import com.example.liushaohua02.androiddemolist.Layout.ActivityLayoutDemo;
 import com.example.liushaohua02.androiddemolist.ListView.ChatActivity;
 import com.example.liushaohua02.androiddemolist.ListView.appListActivity;
 import com.example.liushaohua02.androiddemolist.TransferMessage.ActivityTransferMessage;
 import com.example.liushaohua02.androiddemolist.UISetting.ActivityUI;
+import com.example.liushaohua02.androiddemolist.abstractDemo.abstractDemo;
 import com.example.liushaohua02.androiddemolist.model.listItem;
+import com.example.liushaohua02.androiddemolist.notifityActivity.notifyActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import con.example.liushaohua02.androiddemolist.ServiceActivity.ServiceActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("UI各种样式的调整", ActivityUI.class));
         mlistItems.add(new listItem("Layout", ActivityLayoutDemo.class));
         mlistItems.add(new listItem("Action", ActivityAction.class));
+        mlistItems.add(new listItem("Cache", CacheActivity.class));
         mlistItems.add(new listItem("js交互", JSActivity.class));
         mlistItems.add(new listItem("listView使用",appListActivity.class));
         mlistItems.add(new listItem("聊天listView的使用", ChatActivity.class));
@@ -49,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("Dialog", DialogActivity.class));
         mlistItems.add(new listItem("Fragment", FragmentDemoActivity.class));
         mlistItems.add(new listItem("GridVIew", GridActivity.class));
+        mlistItems.add(new listItem("Interface的使用", InterfaceActivity.class));
+        mlistItems.add(new listItem("Service的使用", ServiceActivity.class));
+        mlistItems.add(new listItem("abstractDemo", abstractDemo.class));
+        mlistItems.add(new listItem("通知的使用", notifyActivity.class));
+        
         mListView.setAdapter(new mainActivityAdaptor(MainActivity.this,mlistItems));
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

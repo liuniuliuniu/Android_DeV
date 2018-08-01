@@ -154,6 +154,7 @@ public class DialogActivity extends BaseActivity {
             dialog.setIndeterminate(true);
             dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             dialog.show();
+
             new Thread() {
 
                 @Override
@@ -173,8 +174,6 @@ public class DialogActivity extends BaseActivity {
                 }
 
             }.start();
-
-
 
 
         }
@@ -268,12 +267,6 @@ public class DialogActivity extends BaseActivity {
                         }
                     });
             builder.show();
-
-
-
-
-
-
 
         }
 

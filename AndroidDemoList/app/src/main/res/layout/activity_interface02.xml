@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.liushaohua02.androiddemolist.Interface的使用.InterfaceActivity02">
+
+    t">
+
+    <Button
+        android:id="@+id/interface02_btn01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮点击01"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        />
+
+    <Button
+        android:id="@+id/interface02_btn02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮点击02"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        />
+
+
+
+</LinearLayout>

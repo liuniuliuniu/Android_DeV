@@ -55,7 +55,6 @@ public class FragmentDemoActivity extends BaseActivity implements ListFragment.O
 
     }
 
-
     @Override
     public void onClick(String title) {
         if (title != null) {

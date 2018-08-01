@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.liushaohua02.androiddemolist">
+          package="com.example.liushaohua02.androiddemolist">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -13,42 +13,53 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".JS.JSActivity" />
-        <activity android:name=".ListView.appListActivity" />
-        <activity android:name=".ListView.ChatActivity" />
-        <activity android:name=".Cache.CacheActivity" />
-        <activity android:name=".TransferMessage.ActivityTransferMessage" />
-        <activity android:name=".TransferMessage.ActivitySecondMessage" />
-        <activity android:name=".CardView.CardViewActivity" />
-        <activity android:name=".Dialog.DialogActivity" />
-        <activity android:name=".Fragment.FragmentDemoActivity" />
-        <activity android:name=".Fragment.StaticLoadFragmentActivity" />
-        <activity android:name=".GridView.GridActivity" />
-        <activity android:name=".GridView.GridActivity01" />
-        <activity android:name=".GridView.GridActiovity02" />
-        <activity android:name=".GridView.GirdActivity03" />
-        <activity android:name=".UISetting.ActivityUI" />
-        <activity android:name=".UISetting.ActivityUIProgress" />
-        <activity android:name=".UISetting.ActivityCheckBox" />
-        <activity android:name=".UISetting.ActivityToggleBtnAndRadioBtn" />
-        <activity android:name=".UISetting.ActivityImageBtn" />
-        <activity android:name=".UISetting.ActivityRatingBar" />
-        <activity android:name=".UISetting.ActivityButton" />
-        <activity android:name=".Layout.ActivityLayoutDemo" />
-        <activity android:name=".Layout.ActivityTableLayout" />
-        <activity android:name=".Layout.ActivityGridLayout" />
-        <activity android:name=".BaseActivity" />
-        <activity android:name=".Layout.ActivityConstraintLayout" />
-        <activity android:name=".Layout.ActivityFrameLayout" />
-        <activity android:name=".UISetting.ActivityMenu" />
-        <activity android:name=".Android_Action.ActivityAction" />
-        <activity android:name=".Android_Action.ActivityActionSecond" />
-        <activity android:name=".UISetting.ActivityUIStyle"></activity>
+        <activity android:name=".JS.JSActivity"/>
+        <activity android:name=".ListView.appListActivity"/>
+        <activity android:name=".ListView.ChatActivity"/>
+        <activity android:name=".Cache.CacheActivity"/>
+        <activity android:name=".TransferMessage.ActivityTransferMessage"/>
+        <activity android:name=".TransferMessage.ActivitySecondMessage"/>
+        <activity android:name=".CardView.CardViewActivity"/>
+        <activity android:name=".Dialog.DialogActivity"/>
+        <activity android:name=".Fragment.FragmentDemoActivity"/>
+        <activity android:name=".Fragment.StaticLoadFragmentActivity"/>
+        <activity android:name=".GridView.GridActivity"/>
+        <activity android:name=".GridView.GridActivity01"/>
+        <activity android:name=".GridView.GridActiovity02"/>
+        <activity android:name=".GridView.GirdActivity03"/>
+        <activity android:name=".UISetting.ActivityUI"/>
+        <activity android:name=".UISetting.ActivityUIProgress"/>
+        <activity android:name=".UISetting.ActivityCheckBox"/>
+        <activity android:name=".UISetting.ActivityToggleBtnAndRadioBtn"/>
+        <activity android:name=".UISetting.ActivityImageBtn"/>
+        <activity android:name=".UISetting.ActivityRatingBar"/>
+        <activity android:name=".UISetting.ActivityButton"/>
+        <activity android:name=".Layout.ActivityLayoutDemo"/>
+        <activity android:name=".Layout.ActivityTableLayout"/>
+        <activity android:name=".Layout.ActivityGridLayout"/>
+        <activity android:name=".BaseActivity"/>
+        <activity android:name=".Layout.ActivityConstraintLayout"/>
+        <activity android:name=".Layout.ActivityFrameLayout"/>
+        <activity android:name=".UISetting.ActivityMenu"/>
+        <activity android:name=".Android_Action.ActivityAction"/>
+        <activity android:name=".Android_Action.ActivityActionSecond"/>
+        <activity android:name=".Interface的使用.InterfaceActivity"/>
+        <activity android:name=".UISetting.ActivityUIStyle"/>
+        <activity android:name=".Interface的使用.InterfaceActivity02"/>
+        <activity android:name="con.example.liushaohua02.androiddemolist.ServiceActivity.ServiceActivity">
+        </activity>
+
+        <service android:name=".EchoService"/>
+
+        <activity android:name=".abstractDemo.abstractDemo">
+        </activity>
+        <activity android:name=".notifityActivity.notifyActivity">
+        </activity>
     </application>
 
 </manifest>

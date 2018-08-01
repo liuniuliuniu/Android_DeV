@@ -14,6 +14,14 @@ public class ActivityImageBtn extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_btn);
 
+
+        findViewById(R.id.imageV).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ActivityImageBtn.this,"1111111",Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     // 为imageBtn添加点击事件
