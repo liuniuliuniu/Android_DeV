@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.liushaohua02.androiddemolist.Android_Action.ActivityAction;
+import com.example.liushaohua02.androiddemolist.Animation.AnimtionActivity;
 import com.example.liushaohua02.androiddemolist.Cache.CacheActivity;
 import com.example.liushaohua02.androiddemolist.CardView.CardViewActivity;
 import com.example.liushaohua02.androiddemolist.Dialog.DialogActivity;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("Service的使用", ServiceActivity.class));
         mlistItems.add(new listItem("abstractDemo", abstractDemo.class));
         mlistItems.add(new listItem("通知的使用", notifyActivity.class));
+        mlistItems.add(new listItem("动画的使用", AnimtionActivity.class));
         
         mListView.setAdapter(new mainActivityAdaptor(MainActivity.this,mlistItems));
 
