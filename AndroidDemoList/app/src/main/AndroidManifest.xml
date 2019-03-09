@@ -54,7 +54,11 @@
         <activity android:name="con.example.liushaohua02.androiddemolist.ServiceActivity.ServiceActivity">
         </activity>
 
-        <service android:name=".EchoService"/>
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
 
         <activity android:name=".abstractDemo.abstractDemo">
         </activity>

@@ -9,76 +9,46 @@ import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
 import com.example.liushaohua02.androiddemolist.R;
 
-public class ServiceActivity extends AppCompatActivity implements View.OnClickListener, ServiceConnection {
+public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
+    
+    private static String TAG = "ServiceActivity";
     
     private Button btnStartService;
     private Button btnStopService;
-    private Button btnBindService;
-    private Button btnUnbindService;
-    private Button btnGetCurrentNumber;
-    private Intent serviceIntent;
-    private EchoService echoService = null;
-    
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service);
-    
-    
-        serviceIntent = new Intent(this, EchoService.class);
-    
+        
+        startService(new Intent(this, MusicService.class));  //启动服务，从而实现播放背景音乐
+        
         btnStartService = (Button) findViewById(R.id.btnStartService);
         btnStopService = (Button) findViewById(R.id.btnStopService);
-        btnBindService = (Button) findViewById(R.id.btnBindService);
-        btnUnbindService = (Button) findViewById(R.id.btnUnbindService);
-        btnGetCurrentNumber = (Button) findViewById(R.id.btnGetCurrentNum);
-    
+        
         btnStartService.setOnClickListener(this);
         btnStopService.setOnClickListener(this);
-        btnBindService.setOnClickListener(this);
-        btnUnbindService.setOnClickListener(this);
-        btnGetCurrentNumber.setOnClickListener(this);
         
     }
-    
-    
     
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnStartService:
-                startService(serviceIntent);
+                if (MusicService.isplay == false) {   //判断音乐播放的状态
+                    startService(new Intent(ServiceActivity.this,
+                            MusicService.class));  //启动服务，从而实现播放背景音乐
+                }
                 break;
             case R.id.btnStopService:
-                stopService(serviceIntent);
-                break;
-            case R.id.btnBindService:
-                bindService(serviceIntent, this, Context.BIND_AUTO_CREATE);
-                break;
-            case R.id.btnUnbindService:
-                unbindService(this);
-                echoService=null;
-                break;
-            case R.id.btnGetCurrentNum:
-                if (echoService!=null) {
-                    System.out.println("当前服务中的数字是："+echoService.getCurrentNum());
+                
+                if (MusicService.isplay != false) {   //判断音乐播放的状态
+                    stopService(new Intent(ServiceActivity.this, MusicService.class));
+                    //停止服务，从而实现停止播放背景音乐
                 }
                 break;
         }
-    }
-    
-    @Override
-    public void onServiceConnected(ComponentName name, IBinder service) {
-        System.out.println("onServiceConnected");
-        echoService = ((EchoService.EchoServiceBinder)service).getService();
-    }
-    
-    @Override
-    public void onServiceDisconnected(ComponentName name) {
-    
     }
 }
