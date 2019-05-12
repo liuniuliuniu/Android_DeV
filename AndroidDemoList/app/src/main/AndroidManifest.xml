@@ -57,14 +57,15 @@
         <service
             android:name=".MusicService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true"/>
 
         <activity android:name=".abstractDemo.abstractDemo">
         </activity>
         <activity android:name=".notifityActivity.notifyActivity">
         </activity>
         <activity android:name=".Animation.AnimtionActivity">
+        </activity>
+        <activity android:name="con.example.liushaohua02.androiddemolist.Thread.ThreadActivity">
         </activity>
     </application>
 
