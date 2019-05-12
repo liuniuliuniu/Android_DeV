@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("abstractDemo", abstractDemo.class));
         mlistItems.add(new listItem("通知的使用", notifyActivity.class));
         mlistItems.add(new listItem("动画的使用", AnimtionActivity.class));
-        mlistItems.add(new listItem("Android的消息机制分子", ThreadActivity.class));
+        mlistItems.add(new listItem("Android的消息机制分析", ThreadActivity.class));
         
         mListView.setAdapter(new mainActivityAdaptor(MainActivity.this,mlistItems));
 
