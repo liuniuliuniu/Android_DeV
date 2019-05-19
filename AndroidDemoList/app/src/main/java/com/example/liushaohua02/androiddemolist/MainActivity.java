@@ -25,6 +25,7 @@ import com.example.liushaohua02.androiddemolist.UISetting.ActivityUI;
 import com.example.liushaohua02.androiddemolist.abstractDemo.abstractDemo;
 import com.example.liushaohua02.androiddemolist.model.listItem;
 import com.example.liushaohua02.androiddemolist.notifityActivity.notifyActivity;
+import com.example.liushaohua02.androidmolist.reflectActivity.reflectActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         mlistItems.add(new listItem("通知的使用", notifyActivity.class));
         mlistItems.add(new listItem("动画的使用", AnimtionActivity.class));
         mlistItems.add(new listItem("Android的消息机制分析", ThreadActivity.class));
+        mlistItems.add(new listItem("Java 反射机制", reflectActivity.class));
         
         mListView.setAdapter(new mainActivityAdaptor(MainActivity.this,mlistItems));
 

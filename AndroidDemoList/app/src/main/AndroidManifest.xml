@@ -67,6 +67,8 @@
         </activity>
         <activity android:name="con.example.liushaohua02.androiddemolist.Thread.ThreadActivity">
         </activity>
+        <activity android:name="com.example.liushaohua02.androidmolist.reflectActivity.reflectActivity">
+        </activity>
     </application>
 
 </manifest>

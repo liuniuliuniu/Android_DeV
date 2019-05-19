@@ -35,9 +35,9 @@ public class MeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //登录
-                Intent login=new Intent(getActivity(),LoginActivity.class);
-
-                startActivity(login);
+//                Intent login=new Intent(getActivity(), LoginActivity.class);
+//
+//                startActivity(login);
             }
         });
 
